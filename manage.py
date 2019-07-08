@@ -1,5 +1,27 @@
-import utils
+import os
+import glob
+from jinja2 import Template
+from django.shortcuts import render
 
-utils.html_files()
+############################################################
+from django.conf import settings
+from django.core.management import execute_from_command_line
+import sys
 
-utils.template_pages()
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+settings.configure(
+    DEBUG=True,
+    ROOT_URLCONF='urls',
+    STATIC_URL='static/',
+    STATIC_ROOT=os.path.join(BASE_DIR, 'static'),
+    INSTALLED_APPS=[
+        'django.contrib.staticfiles',
+    ],
+    TEMPLATES=[{
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+    }],
+)
+
+execute_from_command_line(sys.argv)

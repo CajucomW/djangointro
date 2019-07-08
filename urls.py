@@ -1,5 +1,14 @@
 from django.urls import path
+
 import views
+
+# # In this example, we've separated out the views.py into a new file
+urlpatterns = [
+    path('', views.index),
+    path('tech', views.tech),
+    path('pta', views.pta),
+    path('jiujitsu', views.jiujitsu),
+]
 
 # Boilerplate to include static files
 from django.conf import settings
