@@ -3,7 +3,8 @@ import glob
 from jinja2 import Template
 from django.shortcuts import render
 
-def index(request):
+def base(request):
+    print('Index page is processing...')
     context = {
         'content': 'index.html',
         'title': 'About Me',
@@ -11,30 +12,21 @@ def index(request):
     }
     return render(request, 'base.html', context)
 
+def index(request):
+    context = {}
+    return render(request, 'index.html', context)
+
 def tech(request):
-    context = {
-        'content': 'tech.html',
-        'title': 'Tech',
-        'active': '{{tech_is_active}}',
-    }
-    return render(request, 'base.html', context)
+    context = {}
+    return render(request, 'tech.html', context)
 
 def pta(request):
-    context = {
-        'content': 'pta.html',
-        'title': 'PTA',
-        'active': '{{pta_is_active}}',
-    }
-    return render(request, 'base.html', context)
-
+    context = {}
+    return render(request, 'pta.html', context)
+    
 def jiujitsu(request):
-    context = {
-        'content': 'jiujitsu.html',
-        'title': 'Jiujitsu',
-        'active': '{{jiujitsu_is_active}}',
-    }
-    return render(request, 'base.html', context)
-
+    context = {}
+    return render(request, 'jiujitsu.html', context)
 
 # def templates(content, template, html_file):
 #     combined = template.replace('{{content}}', html_file)

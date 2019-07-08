@@ -1,9 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 <!-- Masthead -->
 <header class="masthead bg-primary text-white text-center">
 
     <div class="container d-flex align-items-center flex-column">
       <!-- Masthead Avatar Image -->
-      <img class="masthead-avatar mb-5" src="img/wc.jpg" alt="">
+      <img class="masthead-avatar mb-5" src="{% static '/wc.jpg' %}" alt="">
       <!-- Masthead Heading -->
       <h1 class="masthead-heading text-uppercase mb-0">hi! I'm wence.</h1>
       <!-- Masthead Subheading -->
@@ -17,7 +20,7 @@
         <div class="col aboutwc mr-auto">
           <p class="lead">I'm a Dreamer looking for new ways to learn and create.</p>
           <p class="lead">As a 
-            <a href="./pta.html">
+            <a href="/pta.html">
 
               <em>
                 healthcare professional
@@ -55,3 +58,5 @@
       </div>
     </div>
   </section>
+
+{% endblock content %}
