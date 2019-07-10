@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+<title>{% block title %}PTA{% endblock %}</title>
 {% load static %}
 {% block content %}
         <!-- Masthead -->
@@ -6,7 +7,7 @@
 
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image -->
-            <img class="masthead-avatar mb-5" src="img/wc4b.jpg" alt="">
+            <img class="masthead-avatar mb-5" src="{% static '/wc4b.jpg' %}" alt="">
             <!-- Masthead Heading -->
             <h1 class="masthead-heading text-uppercase mb-0">Wence Cajucom, PTA.</h1>
             <!-- Masthead Subheading -->
@@ -37,9 +38,9 @@
         <!-- PTA Image Section -->
         <section class="page-section no-padding-bottom">
             <div class="ptagrouppic">
-                <img class="ptapic" src="img/pta4.jpg" alt="">
-                <img class="ptapic" src="img/pta1.jpg" alt="">
-                <img class="ptapic" src="img/pta3.jpg" alt="">
+                <img class="ptapic" src="{% static '/pta4.jpg' %}" alt="">
+                <img class="ptapic" src="{% static '/pta1.jpg' %}" alt="">
+                <img class="ptapic" src="{% static '/pta3.jpg' %}" alt="">
             </div>
         </section>
 

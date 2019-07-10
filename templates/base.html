@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 {% load static %}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -8,17 +9,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>{{title}}</title>
+  <title>{% block title %}About Me{% endblock %}</title>
   <!-- Themes I've picked -->
   <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Saira&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="static/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Theme CSS -->
   <link rel="stylesheet" href="{% static 'css/freelancer.css' %}">
   <link rel="stylesheet" href="{% static 'css/hw1.css' %}">
-
+  
 </head>
 
 <body id="page-top" background="{% static 'css/ricepaper.png' %}">
@@ -35,21 +36,22 @@
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        {% block navigation %}
+        {% endblock %}        
+        <!--<ul class="navbar-nav ml-auto">
           
           {% for page in pages %}
-            <!--{% if link == selected_link %}*{% endif %}-->
+            {% if link == selected_link %}*{% endif %}
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ content }}">{{ title }}</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ page.filename }}">{{ page.filename }}</a>
             </li>  
           {% endfor %}
           
-        </ul>
+        </ul>-->
       </div>
     </div>
   </nav>
 {% block content %}
-{{content}}
 {% endblock content %}
     <!-- Footer -->
     <footer class="footer text-center">
@@ -95,8 +97,8 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.bundle.min.js"></script>
 
   </body>
 </html>

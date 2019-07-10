@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+<title>{% block title %}Jiu-jitsu{% endblock %}</title>
 {% load static %}
 {% block content %}
     <!-- Masthead -->
@@ -7,7 +8,7 @@
       <div class="container d-flex align-items-center flex-column">
 
         <!-- Masthead Avatar Image -->
-        <img class="masthead-avatar mb-5" src="img/formiga.jpg" alt="Wence after competition">
+        <img class="masthead-avatar mb-5" src="{% static '/formiga.jpg' %}" alt="Wence after competition">
 
         <!-- Masthead Heading -->
         <h1 class="masthead-heading text-uppercase mb-0">"formiga"</h1>
@@ -38,9 +39,9 @@
     <!-- Jiujitsu Image Section -->
     <section>
       <div class="jjgrouppic no-padding">
-        <img class="jjpicwc4" src="img/wcjj4.png" alt="">
-        <img class="jjpicwc4" src="img/wcjj3.jpg" alt="">
-        <img class="jjpicwc4" src="img/wcjj.jpg" alt="">
+        <img class="jjpicwc4" src="{% static '/wcjj4.png' %}" alt="">
+        <img class="jjpicwc4" src="{% static '/wcjj3.jpg' %}" alt="">
+        <img class="jjpicwc4" src="{% static '/wcjj.jpg' %}" alt="">
       </div>
     </section>
     
