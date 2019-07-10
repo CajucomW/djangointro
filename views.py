@@ -3,35 +3,6 @@ import glob
 from jinja2 import Template
 from django.shortcuts import render
 
-pages = [
-    {
-    'filename': 'index.html',
-    'title': 'About Me',
-    'active': '{{index_is_active}}',
-    },
-    {
-    'filename': 'tech.html',
-    'title': 'Tech',
-    'active': '{{tech_is_active}}',
-    },
-    {
-    'filename': 'pta.html',
-    'title': 'PTA/Healthcare',
-    'active': '{{pta_is_active}}',
-    },
-    {
-    'filename': 'jiujitsu.html',
-    'title': 'JiuJitsu',   
-    'active': '{{jiujitus_is_active}}',
-    },   
-]    
-for page in pages:
-    print(page['filename'])
-
-# def navigation(request):
-#     context = {}
-#     return render(request, 'navigation.html', context)
-
 def index(request):
     context = {}
     return render(request, 'index.html', context)
