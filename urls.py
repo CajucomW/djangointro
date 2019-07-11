@@ -6,6 +6,7 @@ import views
 urlpatterns = [
     path('', views.index, name="Wence Cajucom"),
     path('tech', views.tech, name="Tech"),
+    path('repos', views.repos, name="Repos"),
     path('pta', views.pta, name="PTA"),
     path('jiujitsu', views.jiujitsu, name="Jiujitsu"),
 ]
