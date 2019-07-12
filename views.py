@@ -5,17 +5,17 @@ from jinja2 import Template
 from django.shortcuts import render
 
 def index(request):
-    print("---Processing Index page---")
+    print("---Viewed Index page---")
     context = {}
     return render(request, 'index.html', context)
 
 def tech(request):
-    print("---Processing Tech page---")
+    print("---Viewed Tech page---")
     context = {}
     return render(request, 'tech.html', context)
 
 def repos(request):
-    print("---Processing Repos page---")
+    print("---Viewed Repos page---")
     response = requests.get('https://api.github.com/users/cajucomw/repos')
     repos = response.json()
     context = {
@@ -24,11 +24,11 @@ def repos(request):
     return render(request, 'repos.html', context)
 
 def pta(request):
-    print("---Processing PTA page---")
+    print("---Viewed PTA page---")
     context = {}
     return render(request, 'pta.html', context)
     
 def jiujitsu(request):
-    print("---Processing Jiujitsu page---")
+    print("---Viewed Jiujitsu page---")
     context = {}
     return render(request, 'jiujitsu.html', context)
