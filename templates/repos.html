@@ -2,38 +2,38 @@
 <title>{% block title %}Repos{% endblock %}</title>
 {% load static %}
 {% block content %}
-        <!-- Masthead -->
+<!-- Masthead -->
         <header class="masthead bg-primary text-white text-center">
 
         <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image -->
+<!-- Masthead Avatar Image -->
             <img class="masthead-avatar mb-5" src="{% static '/wc3.jpg' %}" alt="">
-            <!-- Masthead Heading -->
+<!-- Masthead Heading -->
             <h1 class="masthead-heading text-uppercase mb-0">My GitHub Repositories</h1>
             <!-- Masthead Subheading -->
         </div>
         </header>
 
-        <!-- PTA About Section -->
+<!-- GitHub Section -->
         <section class="page-section">
             <div class="container">
                 <div class="row">
                     <div class="col aboutwc mr-auto">
                         <p class="lead jjabout">
-                            <a href="https://github.com/">GitHub.com</a> is
-                            a website for storing web-based applications
-                            and projects. <strong>Repos</strong>, or <em>repositories</em>
-                            is were different projects are stored. Here are links to all
+                            <a href="https://github.com/" target="_blank">GitHub.com</a> is
+                            a website used to store web-based applications
+                            and projects. Projects are stored in <strong>Repos</strong>, 
+                            or <em>repositories</em>. Here are links to all
                             my repos at GitHub.<br><br>
 
-                            <ol class="lead jjabout">
+                            <ul class="lead jjabout">
                             {% for repo in github_repos %}
                                 <li>
                                     <a href="https://github.com/CajucomW/{{ repo.name }}" target="_blank">
                                     {{ repo.name }}</a>
                                 </li>
                             {% endfor %}
-                            </ol>
+                            </ul>
 
                         </p>
                     </div>
