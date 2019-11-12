@@ -60,4 +60,7 @@ a {
     .twitter-tweet {
         margin-left: 0em;
         }
+    .lead {
+        font-size: 1.25rem;
+    }
 }
