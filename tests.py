@@ -1,1 +1,1 @@
-# write test codes here!
+from django.test import TestCase
